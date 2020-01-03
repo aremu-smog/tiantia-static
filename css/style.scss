@@ -1,0 +1,573 @@
+@font-face{
+    src : url('./font/EnglishTowne.ttf');
+    font-family: "EnglishTowne";
+}
+@font-face{
+    src : url('./font/Poppins-Regular.ttf');
+    font-family: "Poppins-Regular";
+}
+@font-face{
+    src : url('./font/PlayfairDisplay-Bold.otf');
+    font-family: "Playfair-Bold";
+}
+@font-face{
+    src : url('./font/PlayfairDisplay-Regular.otf');
+    font-family: "Playfair-Regular";
+}
+@font-face{
+    src: url('./font/Montserrat-Regular.otf');
+    font-family: "Montserrat-Regular";
+}
+@font-face{
+    src: url('./font/Montserrat-Bold.otf');
+    font-family: "Montserrat-Bold";
+}
+/* Colors */
+$gold: #CC9933;
+$green: #4CCF36;
+$black: #000000;
+$white: #ffffff;
+$deep-grey: #757575;
+
+/* Mixins */
+@mixin button-bare {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 120px;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 13px;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins-Regular';
+}
+.chain-link{
+    width: 100%;
+    margin-top: 6em;
+    height: 150px;
+    div{
+        width: 1px;
+        margin: auto;
+        background: $gold;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            right: 50%;
+            background: $gold;
+            transform: translate(50%, 0%);
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            right: 50%;
+            bottom: 0;
+            background: $gold;
+            transform: translate(50%, 0%);
+        }
+    }
+    .draw-line{
+        height: 35px;
+    }
+}
+
+.main-navigation{
+    font-family: "Poppins-Regular";
+    font-size: 0.8em;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    ul{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        li{
+            display: inline-block;
+            padding:0 1em;
+        }
+        li.active{
+            color: $gold;
+        }
+    }
+}
+.section-header{
+    font-family: "EnglishTowne";
+    font-size: 3.75em;
+    color: $black;
+    text-align: center;
+    margin-top: 0.3em;
+    span{
+        color: $gold;
+    }
+}
+.section-description{
+    font-family: "Montserrat-Regular";
+    font-size: 0.9em;
+    width: 50%;
+    margin: auto;
+    margin-top: 2em;
+    text-align: center;
+}
+.landing{
+    height: 100vh;
+    width: 100%;
+    background: $black;
+    background-image: url('../img/landing-image.png');
+    background-size: 550px;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    text-align: center;
+    article{
+        /* Landing page heading */
+        .heading{
+            font-family: "EnglishTowne";
+            color: $gold;
+            font-size: 6em;
+            text-align: center;
+            line-height: 0;
+        }
+        /* Rider text */
+        content{
+            width: 40%;
+            margin: auto;
+            display: block;
+            margin-top: -2em;
+            p{
+                font-family: "Poppins-Regular";
+                color: $white;
+                font-size: 0.9em;
+            }
+        }
+        /* taste the native */
+        footer{
+            font-size: 1.2em;
+            font-family: "Playfair-Bold";
+            color: $gold;
+            margin-top: -0.5em;
+        }
+    }
+}
+.img-float-right{
+    position: absolute;
+    right: 0;
+    width: 200px;
+    animation: float-element 3s ease-in-out infinite;
+}
+.img-float-left{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    animation: float-element 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+[offset-element="banana-leaf"]{
+    margin-top: -130px;
+}
+
+@keyframes float-element{
+    0%{
+        margin-top: -20px;
+    }
+    50%{
+        margin-top: 0;
+    }
+    100%{
+        margin-top: -20px
+    }
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+.col-6{
+    width: 43%;
+    
+}
+.form-group{
+    margin-top: 2em;
+    label{
+        display: block;
+        font-family: "Playfair-Regular";
+        color: $gold;
+        font-size: 1em;
+    }
+    input,select, .total-amount, textarea{
+        font-family: "Poppins-Regular";
+        outline: none;
+        border: none;
+        color: $deep-grey;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 1em;
+        padding: 9px 20px;
+        background: $white;
+        margin-top: 10px;
+        width: 100%;
+    }
+    input[type="radio"]{
+        width: auto;
+        margin-right: 1em;
+    }
+    .total-amount{
+        .item, .item-total{
+            width: 100%;
+            display: flex;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid $deep-grey;
+            .name{
+                width: 60%;
+            }
+            .quantity{
+                width: 20%;
+            }
+            .price{width: 20%;}
+        }
+        .item-total{
+            border-bottom: none;
+            .name{
+                width: 80%;
+            }
+            .price{
+                font-size: 1.5em;
+            }
+        }
+    }
+    .payment-method {
+        padding: 2em 2em !important;
+        width: 100%;
+        border-radius: 5px;
+        background: $white;
+        
+        input,select{
+            border-bottom: 1px solid $deep-grey !important;
+            border-radius: 0;
+            padding: 9px 0px !important;
+        }
+        .cards, .card-details{ 
+            padding:0;
+            display: flex;
+            justify-content: space-between;
+            div{
+            label{
+                display: flex;
+                align-items: center;
+                img{
+                    height: 30px;
+                }
+            }
+             width: 33.33%; 
+        } }
+        .card-number{
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+    
+}
+
+.body{
+    padding: 10em 2em 4em 2em;
+    .features{
+        display: flex;
+        justify-content: center;
+        .feature{
+            text-align: center;
+            padding: 2em;
+            width: 20%;
+            .title{
+                font-family: 'Poppins-Regular';
+                font-size: 1.4em;
+            }
+            .description{
+                font-family: 'Poppins-Regular';
+                font-size: 0.8em;
+                margin-top: -1em;
+            }
+        }
+    }
+
+    
+
+    .brief-about{
+        transform: rotate(-90deg);
+        position: absolute;
+        left: 0;
+        margin-top: 10%;
+        font-size: 0.8em;
+        line-height: 1.2em;
+    }
+
+   
+    .tianfoods{
+        
+        .features{
+            margin-top: 3em;
+            .feature{
+                .description{
+                    margin-top: 1em;
+                }
+            }
+            
+        }
+
+        .foods{
+            margin-top: 6em;
+        }
+        .swiper-container {
+            width: 85%;
+            height: auto;
+            cursor: grab;
+          }
+          .swiper-slide {
+            text-align: center;
+            .food{
+                min-height: 100px;
+                margin: 1em;
+                border-radius: 5px;
+                padding: 2em;
+                text-align: center;
+                color: white;
+                margin-top: 6em;
+                .arc{
+                    border: 80px solid black;
+                    border-top: 80px solid $gold;
+                    border-right: 80px solid $gold;
+                    width: 1px;
+                    height: 1px;
+                    background: $black;
+                    margin: auto;
+                    margin-top: -110px;
+                    border-radius: 50%;
+                    transform: rotate(-45deg);
+                    position: relative;
+                    z-index: -1;
+                    transition: transform 1s;
+                    &:hover{
+                        border: 100px solid black;
+                        border-bottom: 100px solid $green;
+                        border-left: 100px solid $green;
+                        transform: rotate(135deg);
+                    }
+
+                    
+                }
+                .image{
+                    margin: auto;
+                    text-align: center;
+                    margin-top: -155px;
+                    position: relative;
+                    z-index: 100;
+                    img{
+                        width: 70%;
+                    }
+                }
+
+                header{
+                    font-family: "Playfair-Bold";
+                    color: $gold;
+                    font-size: 1.6em;
+                    text-align: center;
+                    width: 80%;
+                    margin: auto;
+                }
+                .price{
+                    font-family: Montserrat-Regular;
+                    font-size: 2.6em;
+                    margin-top: 10px;
+                    font-weight: 500;
+                }
+                .description{
+                    display: block;
+                    font-size: 10px;
+                    width: 80%;
+                    margin: auto;
+                    margin-top: 2em;
+                }
+                button{
+                    margin-top: 1.5em;
+                    background: $gold;
+                    color: $white;
+                    border: none;
+                    outline: none;
+                    border-radius: 5px;
+                    width: 120px;
+                    font-family: "Playfair-Bold";
+                    padding: 5px;
+                    font-size: 13px;
+                    cursor: pointer;
+                }
+                .options{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 40%;
+                    margin: auto;
+                    margin-top: 2em;
+                    
+                    span{
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 50%;
+                        display: inline-block;
+                        cursor: pointer;
+                    }
+                    .option-black{
+                        background: $white;
+                    }
+                    .option-gold{
+                        background: $gold;
+                    }
+                    .option-green{
+                        background: $green;
+                    }
+                }
+            }
+            .food-black{
+                background: $black;
+            }
+            .food-gold{
+                background: $gold;
+            }
+            .food-green{
+                background: $green;
+            }
+          }
+    }
+}
+.order{
+    padding: 4em 2em;
+    background: $black;
+    .form-area{
+        width: 80%;
+        margin: auto;
+    }
+    button{
+        @include button-bare();
+        background: $gold;
+        color: $white;
+        padding: 10px;
+        font-family: "Montserrat-Bold";
+
+    }
+}
+
+.testimonial{
+    width: 100%;
+    .swiper-container{
+        width: 100%;
+        padding: 6em 0;
+        margin-top: 3em;
+        .testimony{
+            background: $white;
+            border-radius: 5px 5px 0px 0px;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+            padding: 2em 2em 1em 2em;
+            font-size: 0.9em;
+            .image{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                margin: auto;
+                background: $gold;
+                margin-top: -85px;
+            }
+          
+           
+        }
+        .testimony-footer{
+            background: $gold;
+            padding: 1em 2em;
+            font-family: 'Playfair-Bold';
+            color: $black;
+            text-align: right;
+            border-radius: 0px 0px 5px 5px;
+            box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+        }
+    }
+}
+
+.main-footer{
+    background: $black;
+    color: $white;
+    padding: 2em 0;
+    font-size: 0.8em;
+    .row{
+        width: 80%;
+        margin: auto;
+        .col-3{
+            width: 33%;
+        }
+    }
+}
+
+@media only screen and (max-width: 568px){
+    .section-description{
+        width: 80%;
+    }
+    .img-float-left, .img-float-right{
+        width: 100px;
+    }
+    .landing{
+        background-size: 80%;
+        .main-navigation{
+            display: none;
+        }
+        article{
+            .heading{
+                font-size: 4em;
+                line-height: 1em;
+            }
+            content{
+                width: 80%;
+                p{
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+    .body{
+        .features{
+            flex-direction: column;
+            justify-content: center;
+            .feature{
+                width: 100%;
+                padding: 2em 0;
+            }
+            .brief-about{
+                display: none;
+            }
+        }
+        .tianfoods{
+            .swiper-container{
+                width: 100%;
+            }
+        }
+    }
+    .order{
+        padding: 4em 0;
+        .row{
+            flex-direction: column;
+            .col-6{
+                width: 100%;
+            }
+        }
+    }
+    
+}
