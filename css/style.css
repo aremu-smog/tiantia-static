@@ -36,9 +36,15 @@ body {
   font-family: 'Poppins-Regular';
 }
 
+.trigger {
+  height: 200px;
+  background: none;
+  margin-top: -210px;
+}
+
 .chain-link {
   width: 100%;
-  margin-top: 6em;
+  margin-top: 4em;
   height: 150px;
 }
 
@@ -76,6 +82,11 @@ body {
 
 .chain-link .draw-line {
   height: 35px;
+}
+
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after,
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
+  color: #CC9933;
 }
 
 .main-navigation {
@@ -254,7 +265,7 @@ body {
   font-size: 1em;
 }
 
-.form-group input, .form-group select, .form-group .total-amount, .form-group textarea {
+.form-group input, .form-group select, .form-group .total-amount, .form-group textarea, .form-group .payment-method {
   font-family: "Poppins-Regular";
   outline: none;
   border: none;
@@ -266,6 +277,10 @@ body {
   background: #ffffff;
   margin-top: 10px;
   width: 100%;
+}
+
+.form-group select {
+  width: calc(100% + 40px);
 }
 
 .form-group input[type="radio"] {
@@ -308,10 +323,8 @@ body {
 }
 
 .form-group .payment-method {
-  padding: 2em 2em !important;
-  width: 100%;
-  border-radius: 5px;
-  background: #ffffff;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .form-group .payment-method input, .form-group .payment-method select {
@@ -468,7 +481,7 @@ body {
 .body .tianfoods .swiper-slide .food header {
   font-family: "Playfair-Bold";
   color: #CC9933;
-  font-size: 1.6em;
+  font-size: 1.4em;
   text-align: center;
   width: 80%;
   margin: auto;

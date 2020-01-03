@@ -61,6 +61,7 @@
 
         <section class="chain-link">
                 <img src="img/elements/leaf.png" class="img-float-right" />
+
             <div class="draw-line" id="draw-line-1"></div>
         </section>
 
@@ -154,10 +155,11 @@
                     <!-- Add Arrows -->
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
+                    <section class="trigger" id="trigger-2"></section>
                   </div>  
-                  
+                      
         </article>
-
+        
         <section class="chain-link">
             <div class="draw-line" id="draw-line-2"></div>
         </section>
@@ -270,7 +272,7 @@
         </section>
         <img src="img/elements/pot.png" class="img-float-left" />  
     </section>
-
+    <section class="trigger" id="trigger-3"></section>
     <section class="testimonial">
             <section class="chain-link">
                     <div class="draw-line" id="draw-line-3"></div>
@@ -351,18 +353,18 @@
         var controller = new ScrollMagic.Controller();
 
 // create a scene
-var scene = new ScrollMagic.Scene({ triggerElement: "#draw-line-1", duration: 300	})
-								.setTween("#draw-line-1", 0.2, {height:150}) // trigger a TweenMax.to tween
+var scene = new ScrollMagic.Scene({ triggerElement: ".features", duration: 300	})
+								.setTween("#draw-line-1",  {height:150}) // trigger a TweenMax.to tween
                                 .addTo(controller);
 
 
 // create a scene
-var scene = new ScrollMagic.Scene({ triggerElement: "#draw-line-2", duration: 300	})
+var scene = new ScrollMagic.Scene({ triggerElement: "#trigger-2", duration: 300	})
 								.setTween("#draw-line-2", 0.2, {height:150}) // trigger a TweenMax.to tween
                                 .addTo(controller);
 
 // create a scene
-var scene = new ScrollMagic.Scene({ triggerElement: "#draw-line-3", duration: 300	})
+var scene = new ScrollMagic.Scene({ triggerElement: "#trigger-3", duration: 300	})
 								.setTween("#draw-line-3", 0.2, {height:150}) // trigger a TweenMax.to tween
 								.addTo(controller);
     </script>
