@@ -42,6 +42,13 @@ body {
   margin-top: -210px;
 }
 
+.down-arrow {
+  display: block;
+  margin: auto;
+  -webkit-animation: float-button 2s ease-out infinite;
+          animation: float-button 2s ease-out infinite;
+}
+
 .chain-link {
   width: 100%;
   margin-top: 4em;
@@ -161,6 +168,11 @@ body {
   text-align: center;
 }
 
+.landing a {
+  color: #CC9933;
+  text-decoration: none;
+}
+
 .landing article {
   /* Landing page heading */
   /* Rider text */
@@ -238,6 +250,30 @@ body {
   }
   100% {
     margin-top: -20px;
+  }
+}
+
+@-webkit-keyframes float-button {
+  0% {
+    margin-top: -5px;
+  }
+  50% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -5px;
+  }
+}
+
+@keyframes float-button {
+  0% {
+    margin-top: -5px;
+  }
+  50% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -5px;
   }
 }
 
@@ -381,6 +417,10 @@ body {
   margin-top: 1em !important;
 }
 
+.wrapper {
+  scroll-behavior: smooth;
+}
+
 .body {
   padding: 5em 2em 4em 2em;
 }
@@ -485,7 +525,7 @@ body {
 .body .tianfoods .swiper-slide .food header {
   font-family: "Playfair-Bold";
   color: #CC9933;
-  font-size: 1.4em;
+  font-size: 1.3em;
   text-align: center;
   width: 80%;
   margin: auto;
@@ -605,23 +645,24 @@ body {
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   padding: 2em 2em 1em 2em;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 .testimonial .swiper-container .testimony .image {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   margin: auto;
   background: #CC9933;
-  margin-top: -85px;
+  margin-top: -70px;
 }
 
 .testimonial .swiper-container .testimony-footer {
   background: #CC9933;
-  padding: 1em 2em;
+  padding: 0.9em 2em;
   font-family: 'Playfair-Bold';
   color: #000000;
+  font-size: 0.9em;
   text-align: right;
   border-radius: 0px 0px 5px 5px;
   -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
@@ -645,11 +686,17 @@ body {
 }
 
 @media only screen and (max-width: 568px) {
+  .form-group input, .form-group select, .form-group .total-amount, .form-group textarea, .form-group .payment-method {
+    width: calc(100% - 40px);
+  }
+  .form-group select {
+    width: 100%;
+  }
   .section-description {
     width: 80%;
   }
   .img-float-left, .img-float-right {
-    width: 100px;
+    width: 150px;
   }
   .landing {
     background-size: 80%;
@@ -687,8 +734,11 @@ body {
     width: 100%;
   }
   .order {
-    padding: 4em 1em;
+    padding: 4em 2em;
     margin-left: 0;
+  }
+  .order .form-area {
+    width: 100%;
   }
   .order .row {
     -webkit-box-orient: vertical;
