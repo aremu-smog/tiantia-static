@@ -93,7 +93,7 @@
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
                             <article class="food food-black">
-                                    <div class="arc"></div>
+                                    <div class="arc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.4 266.44"><defs><style>.cls-1{fill:#CC9933;}.cls-2{fill:#000000;}</style></defs><title>food-outline</title><g id="dormant"><path class="cls-1" d="M267.4,133.22h-95a38.22,38.22,0,1,1-76.43,0H1c0,73.45,59.76,133.22,133.22,133.22S267.4,206.67,267.4,133.22Z"/></g><g id="active"><path class="cls-2" d="M267.4,133.22h-95a38.22,38.22,0,1,0-76.43,0H1C1,59.76,60.73,0,134.19,0S267.4,59.76,267.4,133.22Z"/></g></svg></div>
                                     <div class="image"><img src="img/foods/beans 1.png" /></div>
                                     <header>Ewa Agonyin Black</header>
                                     <div class="price">N1200</div>
@@ -108,7 +108,7 @@
                       </div>
                       <div class="swiper-slide">
                             <article class="food food-black">
-                                    <div class="arc"></div>
+                                    <div class="arc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.4 266.44"><defs><style>.cls-1{fill:#CC9933;}.cls-2{fill:#000000;}</style></defs><title>food-outline</title><g id="dormant"><path class="cls-1" d="M267.4,133.22h-95a38.22,38.22,0,1,1-76.43,0H1c0,73.45,59.76,133.22,133.22,133.22S267.4,206.67,267.4,133.22Z"/></g><g id="active"><path class="cls-2" d="M267.4,133.22h-95a38.22,38.22,0,1,0-76.43,0H1C1,59.76,60.73,0,134.19,0S267.4,59.76,267.4,133.22Z"/></g></svg></div>
                                     <div class="image"><img src="img/foods/ekuru 1.png" /></div>
                                     <header>Ekuru <br/> Black</header>
                                     <div class="price">N1200</div>
@@ -123,7 +123,7 @@
                       </div>
                       <div class="swiper-slide">
                             <article class="food food-black">
-                            <div class="arc"></div>
+                            <div class="arc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.4 266.44"><defs><style>.cls-1{fill:#CC9933;}.cls-2{fill:#000000;}</style></defs><title>food-outline</title><g id="dormant"><path class="cls-1" d="M267.4,133.22h-95a38.22,38.22,0,1,1-76.43,0H1c0,73.45,59.76,133.22,133.22,133.22S267.4,206.67,267.4,133.22Z"/></g><g id="active"><path class="cls-2" d="M267.4,133.22h-95a38.22,38.22,0,1,0-76.43,0H1C1,59.76,60.73,0,134.19,0S267.4,59.76,267.4,133.22Z"/></g></svg></div>
                             <div class="image"><img src="img/foods/beans 1.png" /></div>
                             <header>Ewa Agonyin Black</header>
                             <div class="price">N1200</div>
@@ -138,7 +138,7 @@
                       </div>
                       <div class="swiper-slide">
                             <article class="food food-black">
-                            <div class="arc"></div>
+                            <div class="arc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.4 266.44"><defs><style>.cls-1{fill:#CC9933;}.cls-2{fill:#000000;}</style></defs><title>food-outline</title><g id="dormant"><path class="cls-1" d="M267.4,133.22h-95a38.22,38.22,0,1,1-76.43,0H1c0,73.45,59.76,133.22,133.22,133.22S267.4,206.67,267.4,133.22Z"/></g><g id="active"><path class="cls-2" d="M267.4,133.22h-95a38.22,38.22,0,1,0-76.43,0H1C1,59.76,60.73,0,134.19,0S267.4,59.76,267.4,133.22Z"/></g></svg></div>
                             <div class="image"><img src="img/foods/beans 1.png" /></div>
                             <header>Ewa Agonyin Black</header>
                             <div class="price">N1200</div>
@@ -174,12 +174,23 @@
         
         <section class="form-area row">
                 <div class="col-6">
-                    <div class="form-group">
-                        <label for="menu-option">Menu Option</label>
-                        <select id="menu-option" name="menu-option">
-                            <option>Ewa Agonyin</option>
-                        </select>
+                    <div class="row">
+                            <div class="col-8">
+                                    <div class="form-group">
+                                            <label for="menu-option">Menu Option</label>
+                                            <select id="menu-option" name="menu-option">
+                                                <option>Ewa Agonyin</option>
+                                            </select>
+                                        </div>
+                                </div>
+                                <div class="col-4">
+                                        <div class="form-group">
+                                                <label for="menu-quantity">Quantity</label>
+                                                <input type="number" name="menu-quantity" value="0" id="menu-quantity" />
+                                            </div>
+                                    </div> 
                     </div>
+                                       
 
                     <div class="form-group">
                         <label >Total Amount</label>
@@ -212,7 +223,7 @@
                                         <label for="phone-number">Phone Number</label>
                                         <input name="phone-number" id="phone-number" value="" placeholder="080XXXXXXXX" />
                                     </div>
-                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-6">
@@ -222,13 +233,13 @@
                         </div>
                         <div class="row">
                                 <div class="col-6">
-                                    <div class="form-group">
+                                    <div class="form-group payment-type">
                                         <label><input type="radio" id="payment-type" name="payment-type" />Pay Online</label>
                                     </div>
                                     
                                 </div>
                                 <div class="col-6">
-                                    <div class="form-group">
+                                    <div class="form-group payment-type">
                                             <label>
                                                 <input type="radio" id="payment-type" name="payment-type" />Pay on Delivery
                                             </label>
@@ -265,7 +276,7 @@
                                 </div>
                         </div>
                         <div class="form-group">
-                            <button>Proceed</button>
+                            <button id="proceed">Proceed</button>
                         </div>
                 </div>
                 
