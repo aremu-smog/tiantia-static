@@ -45,7 +45,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Poppins-Regular';
-    
+    overflow-x: hidden;
 }
 .trigger{
     height: 200px;
@@ -55,7 +55,7 @@ body{
 .down-arrow{
     display: block;
     margin: auto;
-    animation: float-button 2s ease-out infinite;
+    animation: float-button 1.7s ease-out infinite;
 }
 .chain-link{
     width: 100%;
@@ -205,9 +205,9 @@ body{
     100%{margin-top: -20px}
 }
 @keyframes float-button{
-    0%{ margin-top: -5px; }
+    0%{ margin-top: -10px; }
     50%{ margin-top: 0;  }
-    100%{margin-top: -5px}
+    100%{margin-top: -10px}
 }
 .row{
     display: flex;
