@@ -24,6 +24,11 @@
 }
 
 @font-face {
+  src: url("./font/Montserrat-Thin.otf");
+  font-family: "Montserrat-Thin";
+}
+
+@font-face {
   src: url("./font/Montserrat-Bold.otf");
   font-family: "Montserrat-Bold";
 }
@@ -462,6 +467,32 @@ body {
   line-height: 1.2em;
 }
 
+.body .next-button {
+  background-image: url("../img/icons/menu-arrow-right.svg") !important;
+  background-repeat: no-repeat;
+  background-position: center right;
+  position: absolute;
+  margin-top: 250px;
+  right: 5%;
+  cursor: pointer;
+  outline: none;
+  width: 25px;
+  height: 25px;
+}
+
+.body .prev-button {
+  background-image: url("../img/icons/menu-arrow-left.svg") !important;
+  background-repeat: no-repeat;
+  background-position: center right;
+  position: absolute;
+  margin-top: 250px;
+  left: 5%;
+  cursor: pointer;
+  outline: none;
+  width: 25px;
+  height: 25px;
+}
+
 .body .tianfoods .features {
   margin-top: 2em;
 }
@@ -501,14 +532,14 @@ body {
   min-height: 100px;
   margin: 1em;
   border-radius: 5px;
-  padding: 2em;
+  padding: 1em;
   text-align: center;
   color: white;
   margin-top: 6em;
 }
 
 .body .tianfoods .swiper-slide .food .arc {
-  margin-top: -114px;
+  margin-top: -94px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   position: relative;
@@ -542,6 +573,7 @@ body {
   text-align: center;
   width: 80%;
   margin: auto;
+  margin-top: -15px;
 }
 
 .body .tianfoods .swiper-slide .food .price {
@@ -556,7 +588,7 @@ body {
   font-size: 10px;
   width: 80%;
   margin: auto;
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 .body .tianfoods .swiper-slide .food button {
@@ -580,14 +612,14 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 40%;
+  width: 30%;
   margin: auto;
   margin-top: 2em;
 }
 
 .body .tianfoods .swiper-slide .food .options span {
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
