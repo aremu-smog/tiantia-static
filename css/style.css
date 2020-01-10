@@ -94,7 +94,7 @@ body {
 
 .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after,
 .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
-  color: #CC9933;
+  color: rgba(1, 1, 1, 0);
 }
 
 .main-navigation {
@@ -472,6 +472,18 @@ body {
 
 .body .tianfoods .foods {
   margin-top: 2em;
+}
+
+.body .tianfoods .foods .swiper-button-prev {
+  background-image: url("../img/icons/menu-arrow-left.svg") !important;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.body .tianfoods .foods .swiper-button-next {
+  background-image: url("../img/icons/menu-arrow-right.svg") !important;
+  background-repeat: no-repeat;
+  background-position: center left;
 }
 
 .body .tianfoods .swiper-container {
