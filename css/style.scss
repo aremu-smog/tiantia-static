@@ -64,7 +64,7 @@ body{
 .chain-link{
     width: 100%;
     margin-top: 4em;
-    height: 150px;
+    height: 185px;
     div{
         width: 1px;
         margin: auto;
@@ -127,6 +127,10 @@ body{
 }
 .mobile-navigation{
     display: none;
+    padding: 2em 1em;
+    img{
+        width: 150px;
+    }
 }
 .section-header{
     font-family: "EnglishTowne";
@@ -299,7 +303,7 @@ body{
                 display: flex;
                 align-items: center;
                 img{
-                    height: 30px;
+                    height: 25px;
                 }
             }
              width: 33.33%; 
@@ -357,7 +361,8 @@ body{
         right: 5%;
         cursor: pointer;
         outline: none;
-        width: 25px;
+        width: 20px;
+        background-size: contain;
         height: 25px;
       }
       .prev-button{
@@ -369,7 +374,8 @@ body{
         left: 5%;
         cursor: pointer;
         outline: none;
-        width: 25px;
+        width: 20px;
+        background-size: contain;
         height: 25px;
       }
    
@@ -379,6 +385,7 @@ body{
             margin-top: 2em;
             .feature{
                 .description{
+                    margin: auto;
                     margin-top: 1em;
                 }
             }
@@ -602,16 +609,29 @@ body{
     .form-group{
         input, select, .total-amount, textarea, .payment-method{
             width: calc(100% - 40px);
+            font-size: 0.8em;
+            .card-number, .card-details{
+                width: calc(100% + 40px);
+                input, select{
+                    padding-bottom: 0.5em !important;
+                }
+            }
         }
         select{
             width: 100%;
+            font-size: 0.8em;
         }
+        label{
+            font-size: 0.9em;
+        }
+        
     }
     .section-description{
-        width: 80%;
+        width: 90%;
     }
     .img-float-left, .img-float-right{
         width: 150px;
+        display: none;
     }
     .landing{
         background-size: 80%;
@@ -620,10 +640,13 @@ body{
         }
         .mobile-navigation{
             display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         article{
             .heading{
-                font-size: 4em;
+                font-size: 3.6em;
+                padding: 0 1em;
                 line-height: 1em;
             }
             content{
@@ -641,16 +664,46 @@ body{
             .feature{
                 width: 100%;
                 padding: 2em 0;
+                .title{
+                    h3{
+                        font-size: 1em !important;
+                    }
+                }
+                .icon{
+                    img{
+                        height: 60px;
+                    }
+                }
             }
             .brief-about{
                 display: none;
             }
+
+            
         }
         .tianfoods{
-            .swiper-container{
-                width: 100%;
+            .feature{
+
+                .icon{
+                    img{
+                        height: 20px !important;
+                    }
+                }
+
+                .description{
+                    width: 80%;
+                }
             }
         }
+    
+        .tianfoods{
+            .swiper-container{
+                width: 85%;
+            }
+        }
+    }
+    .section-header{
+        font-size: 2.75em;
     }
     .order{
         padding: 4em 2em;
@@ -665,5 +718,17 @@ body{
             }
         }
     }
+    // .body{
+    // .prev-button{ left: 2%; }
+    // .next-button{ right: 2%;}
+    // }
+    .payment-row, .menu-row{
+        flex-direction: row !important;
+        .col-8{   width: 165% !important;
+        padding-right: 10px;  }
+        
+    }
+    
+    
     
 }

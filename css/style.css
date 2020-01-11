@@ -58,7 +58,7 @@ body {
 .chain-link {
   width: 100%;
   margin-top: 4em;
-  height: 150px;
+  height: 185px;
 }
 
 .chain-link div {
@@ -140,6 +140,15 @@ body {
 
 .main-navigation ul li.active {
   color: #CC9933;
+}
+
+.mobile-navigation {
+  display: none;
+  padding: 2em 1em;
+}
+
+.mobile-navigation img {
+  width: 150px;
 }
 
 .section-header {
@@ -411,7 +420,7 @@ body {
 }
 
 .form-group .payment-method .cards div label img, .form-group .payment-method .card-details div label img {
-  height: 30px;
+  height: 25px;
 }
 
 .form-group .payment-method .card-number {
@@ -476,7 +485,8 @@ body {
   right: 5%;
   cursor: pointer;
   outline: none;
-  width: 25px;
+  width: 20px;
+  background-size: contain;
   height: 25px;
 }
 
@@ -489,7 +499,8 @@ body {
   left: 5%;
   cursor: pointer;
   outline: none;
-  width: 25px;
+  width: 20px;
+  background-size: contain;
   height: 25px;
 }
 
@@ -498,6 +509,7 @@ body {
 }
 
 .body .tianfoods .features .feature .description {
+  margin: auto;
   margin-top: 1em;
 }
 
@@ -735,15 +747,27 @@ body {
 @media only screen and (max-width: 568px) {
   .form-group input, .form-group select, .form-group .total-amount, .form-group textarea, .form-group .payment-method {
     width: calc(100% - 40px);
+    font-size: 0.8em;
+  }
+  .form-group input .card-number, .form-group input .card-details, .form-group select .card-number, .form-group select .card-details, .form-group .total-amount .card-number, .form-group .total-amount .card-details, .form-group textarea .card-number, .form-group textarea .card-details, .form-group .payment-method .card-number, .form-group .payment-method .card-details {
+    width: calc(100% + 40px);
+  }
+  .form-group input .card-number input, .form-group input .card-number select, .form-group input .card-details input, .form-group input .card-details select, .form-group select .card-number input, .form-group select .card-number select, .form-group select .card-details input, .form-group select .card-details select, .form-group .total-amount .card-number input, .form-group .total-amount .card-number select, .form-group .total-amount .card-details input, .form-group .total-amount .card-details select, .form-group textarea .card-number input, .form-group textarea .card-number select, .form-group textarea .card-details input, .form-group textarea .card-details select, .form-group .payment-method .card-number input, .form-group .payment-method .card-number select, .form-group .payment-method .card-details input, .form-group .payment-method .card-details select {
+    padding-bottom: 0.5em !important;
   }
   .form-group select {
     width: 100%;
+    font-size: 0.8em;
+  }
+  .form-group label {
+    font-size: 0.9em;
   }
   .section-description {
-    width: 80%;
+    width: 90%;
   }
   .img-float-left, .img-float-right {
     width: 150px;
+    display: none;
   }
   .landing {
     background-size: 80%;
@@ -751,8 +775,20 @@ body {
   .landing .main-navigation {
     display: none;
   }
+  .landing .mobile-navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .landing article .heading {
-    font-size: 4em;
+    font-size: 3.6em;
+    padding: 0 1em;
     line-height: 1em;
   }
   .landing article content {
@@ -774,11 +810,26 @@ body {
     width: 100%;
     padding: 2em 0;
   }
+  .body .features .feature .title h3 {
+    font-size: 1em !important;
+  }
+  .body .features .feature .icon img {
+    height: 60px;
+  }
   .body .features .brief-about {
     display: none;
   }
+  .body .tianfoods .feature .icon img {
+    height: 20px !important;
+  }
+  .body .tianfoods .feature .description {
+    width: 80%;
+  }
   .body .tianfoods .swiper-container {
-    width: 100%;
+    width: 85%;
+  }
+  .section-header {
+    font-size: 2.75em;
   }
   .order {
     padding: 4em 2em;
@@ -795,6 +846,16 @@ body {
   }
   .order .row .col-6, .order .row .col-8, .order .row .col-4 {
     width: 100%;
+  }
+  .payment-row, .menu-row {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+  .payment-row .col-8, .menu-row .col-8 {
+    width: 165% !important;
+    padding-right: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */

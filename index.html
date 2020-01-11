@@ -24,7 +24,8 @@
                             </ul>
                     </nav>
                     <nav class="mobile-navigation">
-                        Mobile Navigation
+                        <a href="#"><img src="img/tiantia logo white.svg" alt="tiantia"></a>
+                        <a href="#">Menu Icon</a>
                     </nav>
                 <article>
                     <header>
@@ -183,7 +184,7 @@
                 
                 <section class="form-area row">
                         <div class="col-6">
-                            <div class="row">
+                            <div class="row menu-row">
                                     <div class="col-8">
                                             <div class="form-group">
                                                     <label for="menu-option">Menu Option</label>
@@ -240,7 +241,7 @@
                                     <label for="address">Address</label>
                                     <textarea name="address" id="address" placeholder="House 4, Dolphin Estate, Ikoyi, Lagos state"></textarea>
                                 </div>
-                                <div class="row">
+                                <div class="row payment-row">
                                         <div class="col-6">
                                             <div class="form-group payment-type">
                                                 <label><input type="radio" id="payment-type" name="payment-type" />Pay Online</label>
@@ -382,18 +383,18 @@
 
 // create a scene
 var scene = new ScrollMagic.Scene({ triggerElement: ".features", duration: 300	})
-								.setTween("#draw-line-1",  {height:150}) // trigger a TweenMax.to tween
+								.setTween("#draw-line-1",  {height:185}) // trigger a TweenMax.to tween
                                 .addTo(controller);
 
 
 // create a scene
 var scene = new ScrollMagic.Scene({ triggerElement: "#trigger-2", duration: 300	})
-								.setTween("#draw-line-2", 0.2, {height:150}) // trigger a TweenMax.to tween
+								.setTween("#draw-line-2", 0.2, {height:185}) // trigger a TweenMax.to tween
                                 .addTo(controller);
 
 // create a scene
 var scene = new ScrollMagic.Scene({ triggerElement: "#trigger-3", duration: 300	})
-								.setTween("#draw-line-3", 0.2, {height:150}) // trigger a TweenMax.to tween
+								.setTween("#draw-line-3", 0.2, {height:185}) // trigger a TweenMax.to tween
 								.addTo(controller);
     </script>
     <script src="js/swiper.min.js"></script>
@@ -401,7 +402,7 @@ var scene = new ScrollMagic.Scene({ triggerElement: "#trigger-3", duration: 300	
     <script>
         var swiper = new Swiper('.swiper-container', {
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 0,
 
       loop: true,
       loopFillGroupWithBlank: true,
