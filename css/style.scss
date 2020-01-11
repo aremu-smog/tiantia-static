@@ -645,8 +645,8 @@ body{
         }
         article{
             .heading{
-                font-size: 3.6em;
-                padding: 0 1em;
+                font-size: 3.4em;
+                padding: 0 0.5em;
                 line-height: 1em;
             }
             content{
@@ -698,7 +698,7 @@ body{
     
         .tianfoods{
             .swiper-container{
-                width: 85%;
+                width: 90%;
             }
         }
     }
@@ -718,10 +718,10 @@ body{
             }
         }
     }
-    // .body{
-    // .prev-button{ left: 2%; }
-    // .next-button{ right: 2%;}
-    // }
+    .body{
+    .prev-button, .next-button{ width:15px; height: 20px; }
+    
+    }
     .payment-row, .menu-row{
         flex-direction: row !important;
         .col-8{   width: 165% !important;
