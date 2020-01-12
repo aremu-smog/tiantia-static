@@ -646,6 +646,7 @@ body{
     }
     .section-description{
         width: 90%;
+        font-size: 0.8em;
     }
     .img-float-left, .img-float-right{
         width: 150px;
@@ -709,12 +710,13 @@ body{
 
                 .icon{
                     img{
-                        height: 20px !important;
+                        height: 15px !important;
                     }
                 }
 
                 .description{
                     width: 80%;
+                    font-size: 0.7em;
                 }
             }
         }
