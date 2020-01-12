@@ -62,10 +62,10 @@
                     <p>We celebrate and enjoy the <br/>variety of <b>beautiful modern and urban food.</b></p>
                 </section>
                 </section>
-        
+                <section class="trigger" id="trigger-1"></section>
                 <section class="chain-link">
                         <img src="img/elements/leaf.png" data-aos="zoom-out" class="img-float-right" />
-        
+                        
                     <div class="draw-line" id="draw-line-1"></div>
                 </section>
         
@@ -382,7 +382,7 @@
         var controller = new ScrollMagic.Controller();
 
 // create a scene
-var scene = new ScrollMagic.Scene({ triggerElement: ".features", duration: 300	})
+var scene = new ScrollMagic.Scene({ triggerElement: "#trigger-1", duration: 300	})
 								.setTween("#draw-line-1",  {height:185}) // trigger a TweenMax.to tween
                                 .addTo(controller);
 

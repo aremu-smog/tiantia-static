@@ -29,6 +29,11 @@
 }
 
 @font-face {
+  src: url("./font/Montserrat-SemiBold.ttf");
+  font-family: "Montserrat-Semibold";
+}
+
+@font-face {
   src: url("./font/Montserrat-Bold.otf");
   font-family: "Montserrat-Bold";
 }
@@ -164,7 +169,7 @@ body {
 }
 
 .section-description {
-  font-family: "Montserrat-Regular";
+  font-family: "Montserrat-Semibold";
   font-size: 0.9em;
   width: 50%;
   margin: auto;
@@ -429,7 +434,7 @@ body {
 }
 
 .payment-type {
-  margin-top: 1em !important;
+  margin-top: 0em !important;
 }
 
 .wrapper {
@@ -456,7 +461,7 @@ body {
 }
 
 .body .features .feature .title {
-  font-family: 'Poppins-Regular';
+  font-family: 'Montserrat-Semibold';
   font-size: 1.4em;
 }
 
@@ -689,7 +694,7 @@ body {
 }
 
 .testimonial {
-  width: 95%;
+  width: 100%;
   margin: auto;
 }
 
@@ -745,7 +750,19 @@ body {
   width: 33%;
 }
 
-@media only screen and (max-width: 568px) {
+@media only screen and (min-width: 1024px) and (max-width: 1359px) {
+  .landing {
+    background-size: 50%;
+  }
+  .landing article content {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .form-group {
+    margin-top: 1em;
+  }
   .form-group input, .form-group select, .form-group .total-amount, .form-group textarea, .form-group .payment-method {
     width: calc(100% - 40px);
     font-size: 0.8em;
