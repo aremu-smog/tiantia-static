@@ -144,7 +144,7 @@ body {
 
 .mobile-navigation {
   display: none;
-  padding: 2em 1em;
+  padding: 1em 1em;
 }
 
 .mobile-navigation img {
@@ -689,7 +689,8 @@ body {
 }
 
 .testimonial {
-  width: 100%;
+  width: 95%;
+  margin: auto;
 }
 
 .testimonial .swiper-container {
@@ -787,15 +788,19 @@ body {
             align-items: center;
   }
   .landing article .heading {
-    font-size: 3.4em;
+    font-size: 3.2em;
     padding: 0 0.5em;
     line-height: 1em;
   }
   .landing article content {
     width: 80%;
+    margin-top: -2em;
   }
   .landing article content p {
-    font-size: 0.8em;
+    font-size: 0.7em;
+  }
+  .landing article footer {
+    font-size: 1em;
   }
   .body .features {
     -webkit-box-orient: vertical;

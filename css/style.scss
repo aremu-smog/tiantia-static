@@ -127,7 +127,7 @@ body{
 }
 .mobile-navigation{
     display: none;
-    padding: 2em 1em;
+    padding: 1em 1em;
     img{
         width: 150px;
     }
@@ -556,7 +556,8 @@ body{
 }
 
 .testimonial{
-    width: 100%;
+    width: 95%;
+    margin: auto;
     .swiper-container{
         width: 100%;
         padding: 6em 0;
@@ -645,15 +646,19 @@ body{
         }
         article{
             .heading{
-                font-size: 3.4em;
+                font-size: 3.2em;
                 padding: 0 0.5em;
                 line-height: 1em;
             }
             content{
                 width: 80%;
+                margin-top: -2em;
                 p{
-                    font-size: 0.8em;
+                    font-size: 0.7em;
                 }
+            }
+            footer{
+                font-size: 1em;
             }
         }
     }
@@ -729,6 +734,6 @@ body{
         
     }
     
-    
+   
     
 }
