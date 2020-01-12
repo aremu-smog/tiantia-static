@@ -772,6 +772,7 @@ body {
   }
   .landing {
     background-size: 80%;
+    height: calc(100% - 90);
   }
   .landing .main-navigation {
     display: none;
@@ -789,7 +790,7 @@ body {
   }
   .landing article .heading {
     font-size: 3.2em;
-    padding: 0 0.5em;
+    padding: 0 1em;
     line-height: 1em;
   }
   .landing article content {
@@ -816,7 +817,7 @@ body {
     padding: 2em 0;
   }
   .body .features .feature .title h3 {
-    font-size: 1em !important;
+    font-size: 0.9em !important;
   }
   .body .features .feature .icon img {
     height: 60px;
