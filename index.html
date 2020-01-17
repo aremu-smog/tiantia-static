@@ -10,6 +10,20 @@
     <title>Tiantia</title>
 </head>
 <body>
+        <div class="">
+                <div id="ayo-trigger"></div>
+                <img src="img/elements/ayo.png" class="float"   id="ayo" />
+        </div>
+        <div class="leaf">
+            <div id="leaf-trigger"></div>
+            <img src="img/elements/leaf.png" class="float"   id="leaf" />
+        </div>
+
+        <div class="pot" id="pot_area">
+                <div id="pot-trigger"></div>
+                <img src="img/elements/pot.png" class="float"   id="pot" />
+        </div>
+        
     <section class="wrapper">
             <section class="landing">
                     <nav class="main-navigation">
@@ -64,7 +78,7 @@
                 </section>
                 <section class="trigger" id="trigger-1"></section>
                 <section class="chain-link">
-                        <img src="img/elements/leaf.png" data-aos="zoom-out" class="img-float-right" />
+                        
                         
                     <div class="draw-line" id="draw-line-1"></div>
                 </section>
@@ -92,7 +106,7 @@
                                     </article>
                     
                         </section>
-                    <img src="img/elements/corn.png" data-aos="zoom-out" class="img-float-left" />
+                    <!-- <img src="img/elements/corn.png" data-aos="zoom-out" class="img-float-left" /> -->
                     
                     <div class="next-button"></div>
                     <div class="prev-button"></div>
@@ -291,7 +305,7 @@
                         </div>
                         
                 </section>
-                <img src="img/elements/pot.png" data-aos="zoom-out" class="img-float-left" />  
+                <!-- <img src="img/elements/pot.png" data-aos="zoom-out" class="img-float-left" />   -->
             </section>
             <section class="trigger" id="trigger-3"></section>
             <section class="testimonial">
@@ -380,7 +394,13 @@
     <script src="js/animation.gsap.js"></script>
     <script>
         var controller = new ScrollMagic.Controller();
-
+        
+        var leaf_scene = new ScrollMagic.Scene({ triggerElement: "#leaf-trigger", duration: 3200	})
+								.setTween("#leaf",  {top:'250%',right:'-3%'}) // trigger a TweenMax.to tween
+                                .addTo(controller);
+        var leaf_scene = new ScrollMagic.Scene({ triggerElement: "#pot-trigger", duration: 5000	})
+        .setTween("#pot",  {top:'450%',width:'400px'}) // trigger a TweenMax.to tween
+        .addTo(controller);
 // create a scene
 var scene = new ScrollMagic.Scene({ triggerElement: "#trigger-1", duration: 300	})
 								.setTween("#draw-line-1",  {height:185}) // trigger a TweenMax.to tween

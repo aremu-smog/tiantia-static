@@ -201,17 +201,60 @@ body{
     position: absolute;
     right: 0;
     width: 250px;
-    animation: float-element 3.5s ease-in-out infinite;
+    // animation: float-element 3.5s ease-in-out infinite;
 }
 .img-float-left{
     position: absolute;
     left: 0;
     width: 250px;
-    animation: float-element 3.5s ease-in-out infinite;
-    animation-delay: 1.5s;
+    // animation: float-element 3.5s ease-in-out infinite;
+    // animation-delay: 1.5s;
 }
 [offset-element="banana-leaf"]{
     margin-top: -130px;
+}
+
+// #leaf-trigger{
+  
+// }
+.float{
+    animation: float-element 3s ease-in-out infinite;
+}
+#leaf{
+    position: absolute;
+    top: 5%;
+    width: 300px;
+    right: -7%;
+}
+
+#pot{
+    @extend #leaf;
+    left: -7%;
+    top:-40%;
+}
+// #pot_area{
+//     position: absolute;
+//     top: 0%;
+//     left: -7%;
+//     #pot-trigger{
+//         // height: 200px;
+//     }
+//     #pot{
+//         position:relative;
+//         width: 350px;
+//         top: 50%;
+//     }
+// }
+#ayo{
+    @extend #leaf;
+    right: -15%;
+    top: -40%;
+    width: 400px;
+    animation-delay: 1.5s;
+}
+.leaf{
+    // padding-bottom: 100px;
+    // padding-bottom: 200px;
 }
 
 @keyframes float-element{
@@ -334,6 +377,9 @@ body{
             text-align: center;
             padding: 2em;
             width: 15%;
+            img{
+                height: 100px;
+            }
             .title{
                 font-family: 'Montserrat-Semibold';
                 font-size: 1.4em;
@@ -388,6 +434,9 @@ body{
         .features{
             margin-top: 2em;
             .feature{
+                img{
+                    height: 18px;
+                }
                 .description{
                     margin: auto;
                     margin-top: 1em;
@@ -753,7 +802,10 @@ body{
         padding-right: 10px;  }
         
     }
-    
+  
+.float{
+    display: none !important;
+}
    
     
 }

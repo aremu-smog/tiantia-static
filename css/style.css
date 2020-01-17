@@ -231,22 +231,41 @@ body {
   position: absolute;
   right: 0;
   width: 250px;
-  -webkit-animation: float-element 3.5s ease-in-out infinite;
-          animation: float-element 3.5s ease-in-out infinite;
 }
 
 .img-float-left {
   position: absolute;
   left: 0;
   width: 250px;
-  -webkit-animation: float-element 3.5s ease-in-out infinite;
-          animation: float-element 3.5s ease-in-out infinite;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
 }
 
 [offset-element="banana-leaf"] {
   margin-top: -130px;
+}
+
+.float {
+  -webkit-animation: float-element 3s ease-in-out infinite;
+          animation: float-element 3s ease-in-out infinite;
+}
+
+#leaf, #pot, #ayo {
+  position: absolute;
+  top: 5%;
+  width: 300px;
+  right: -7%;
+}
+
+#pot {
+  left: -7%;
+  top: -40%;
+}
+
+#ayo {
+  right: -15%;
+  top: -40%;
+  width: 400px;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 @-webkit-keyframes float-element {
@@ -460,6 +479,10 @@ body {
   width: 15%;
 }
 
+.body .features .feature img {
+  height: 100px;
+}
+
 .body .features .feature .title {
   font-family: 'Montserrat-Semibold';
   font-size: 1.4em;
@@ -511,6 +534,10 @@ body {
 
 .body .tianfoods .features {
   margin-top: 2em;
+}
+
+.body .tianfoods .features .feature img {
+  height: 18px;
 }
 
 .body .tianfoods .features .feature .description {
@@ -885,6 +912,9 @@ body {
   .payment-row .col-8, .menu-row .col-8 {
     width: 165% !important;
     padding-right: 10px;
+  }
+  .float {
+    display: none !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
