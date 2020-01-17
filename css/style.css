@@ -56,8 +56,21 @@ body {
 .down-arrow {
   display: block;
   margin: auto;
-  -webkit-animation: float-button 1.7s ease-out infinite;
-          animation: float-button 1.7s ease-out infinite;
+  -webkit-animation: float-button 1s ease-in-out infinite;
+          animation: float-button 1s ease-in-out infinite;
+}
+
+.big-circle {
+  width: 60%;
+  position: absolute;
+  z-index: -1;
+  right: -30%;
+  margin-top: -40%;
+}
+
+.big-circle:last-child {
+  left: -30%;
+  margin-top: -20%;
 }
 
 .chain-link {
@@ -227,6 +240,29 @@ body {
   margin-top: -0.5em;
 }
 
+.landing .hero-image {
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  right: 30%;
+}
+
+.landing .hero-corn {
+  position: absolute;
+  left: 25%;
+  bottom: 0%;
+  -webkit-transform: rotate(-105deg);
+          transform: rotate(-105deg);
+  width: 350px;
+}
+
+.landing .hero-banana {
+  position: absolute;
+  right: 30%;
+  bottom: 0;
+  width: 300px;
+}
+
 .img-float-right {
   position: absolute;
   right: 0;
@@ -240,7 +276,9 @@ body {
 }
 
 [offset-element="banana-leaf"] {
-  margin-top: -130px;
+  margin-top: -30px;
+  right: -100px;
+  width: 350px;
 }
 
 .float {
@@ -294,25 +332,25 @@ body {
 
 @-webkit-keyframes float-button {
   0% {
-    margin-top: -10px;
+    margin-top: -15px;
   }
   50% {
     margin-top: 0;
   }
   100% {
-    margin-top: -10px;
+    margin-top: -15px;
   }
 }
 
 @keyframes float-button {
   0% {
-    margin-top: -10px;
+    margin-top: -15px;
   }
   50% {
     margin-top: 0;
   }
   100% {
-    margin-top: -10px;
+    margin-top: -15px;
   }
 }
 
@@ -471,6 +509,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-image: url("../img/icons/circle-1.svg");
+  background-repeat: no-repeat;
+  background-position: 19% 5%;
 }
 
 .body .features .feature {
@@ -492,6 +533,12 @@ body {
   font-family: 'Poppins-Regular';
   font-size: 0.8em;
   margin-top: -1em;
+}
+
+.body .chain-link {
+  background: url("../img/icons/circle-1.svg");
+  background-repeat: no-repeat;
+  background-position-x: 40%;
 }
 
 .body .brief-about {
@@ -534,6 +581,7 @@ body {
 
 .body .tianfoods .features {
   margin-top: 2em;
+  background: none;
 }
 
 .body .tianfoods .features .feature img {
@@ -547,6 +595,7 @@ body {
 
 .body .tianfoods .foods {
   margin-top: 2em;
+  padding-bottom: 2em;
 }
 
 .body .tianfoods .foods .swiper-button-prev {
@@ -580,8 +629,8 @@ body {
   text-align: center;
   color: white;
   margin-top: 6em;
-  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
 }
 
 .body .tianfoods .swiper-slide .food .arc {
@@ -649,6 +698,11 @@ body {
   padding: 5px;
   font-size: 13px;
   cursor: pointer;
+  border: 1px solid #CC9933;
+}
+
+.body .tianfoods .swiper-slide .food button:hover {
+  background: none;
 }
 
 .body .tianfoods .swiper-slide .food .options {
@@ -664,8 +718,8 @@ body {
 }
 
 .body .tianfoods .swiper-slide .food .options span {
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
@@ -687,12 +741,53 @@ body {
   background: #000000;
 }
 
-.body .tianfoods .swiper-slide .food-gold {
+.body .tianfoods .swiper-slide .food-gold, .body .tianfoods .swiper-slide .food-green {
   background: #CC9933;
+  -webkit-box-shadow: 0px 0px 25px rgba(204, 153, 51, 0.5);
+          box-shadow: 0px 0px 25px rgba(204, 153, 51, 0.5);
+}
+
+.body .tianfoods .swiper-slide .food-gold header, .body .tianfoods .swiper-slide .food-green header {
+  color: #000000;
+}
+
+.body .tianfoods .swiper-slide .food-gold .arc, .body .tianfoods .swiper-slide .food-green .arc {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  margin-top: -90px;
+}
+
+.body .tianfoods .swiper-slide .food-gold .image, .body .tianfoods .swiper-slide .food-green .image {
+  margin-top: -150px;
+}
+
+.body .tianfoods .swiper-slide .food-gold button, .body .tianfoods .swiper-slide .food-green button {
+  border: 1px solid black;
+  background: none;
+  color: black;
+}
+
+.body .tianfoods .swiper-slide .food-gold button:hover, .body .tianfoods .swiper-slide .food-green button:hover {
+  background: black;
+  color: white;
+}
+
+.body .tianfoods .swiper-slide .food-gold .options .option-gold, .body .tianfoods .swiper-slide .food-green .options .option-gold {
+  background-color: black;
 }
 
 .body .tianfoods .swiper-slide .food-green {
+  -webkit-box-shadow: 0px 0px 25px rgba(76, 207, 54, 0.5);
+          box-shadow: 0px 0px 25px rgba(76, 207, 54, 0.5);
   background: #4CCF36;
+}
+
+.body .tianfoods .swiper-slide .food-green .options .option-gold {
+  background-color: #CC9933;
+}
+
+.body .tianfoods .swiper-slide .food-green .options .option-green {
+  background-color: black;
 }
 
 .order {
@@ -702,7 +797,7 @@ body {
 }
 
 .order .form-area {
-  width: 70%;
+  width: 65%;
   margin: auto;
 }
 

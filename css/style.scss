@@ -63,12 +63,24 @@ body{
 .down-arrow{
     display: block;
     margin: auto;
-    animation: float-button 1.7s ease-out infinite;
+    animation: float-button 1s ease-in-out infinite;
+}
+.big-circle{
+    width: 60%;
+    position: absolute;
+    z-index: -1;
+    right:-30%;
+    margin-top: -40%;
+    &:last-child{
+        left: -30%;
+        margin-top: -20%;
+    }
 }
 .chain-link{
     width: 100%;
     margin-top: 4em;
     height: 185px;
+    
     div{
         width: 1px;
         margin: auto;
@@ -196,6 +208,26 @@ body{
             margin-top: -0.5em;
         }
     }
+    .hero-image{
+        width: 40%;
+        position: absolute;
+        bottom: 0;
+        right: 30%;
+
+    }
+    .hero-corn{
+        position: absolute;
+        left: 25%;
+        bottom:0%;
+        transform: rotate(-105deg);
+        width: 350px;
+    }
+    .hero-banana{
+        position: absolute;
+        right: 30%;
+        bottom: 0;
+        width: 300px;
+    }
 }
 .img-float-right{
     position: absolute;
@@ -211,7 +243,9 @@ body{
     // animation-delay: 1.5s;
 }
 [offset-element="banana-leaf"]{
-    margin-top: -130px;
+    margin-top: -30px;
+    right:-100px;
+    width: 350px;
 }
 
 // #leaf-trigger{
@@ -263,9 +297,9 @@ body{
     100%{margin-top: -20px}
 }
 @keyframes float-button{
-    0%{ margin-top: -10px; }
+    0%{ margin-top: -15px; }
     50%{ margin-top: 0;  }
-    100%{margin-top: -10px}
+    100%{margin-top: -15px}
 }
 .row{
     display: flex;
@@ -373,6 +407,9 @@ body{
     .features{
         display: flex;
         justify-content: center;
+        background-image: url('../img/icons/circle-1.svg');
+        background-repeat: no-repeat;
+        background-position: 19% 5%;
         .feature{
             text-align: center;
             padding: 2em;
@@ -393,7 +430,12 @@ body{
     }
 
     
-
+    .chain-link{
+        
+        background: url('../img/icons/circle-1.svg');
+        background-repeat: no-repeat;
+        background-position-x: 40%;
+    }
     .brief-about{
         transform: rotate(-90deg);
         position: absolute;
@@ -433,6 +475,7 @@ body{
         
         .features{
             margin-top: 2em;
+            background: none;
             .feature{
                 img{
                     height: 18px;
@@ -447,6 +490,7 @@ body{
 
         .foods{
             margin-top: 2em;
+            padding-bottom: 2em;
             .swiper-button-prev {
                 background-image: url("../img/icons/menu-arrow-left.svg") !important;
                 background-repeat: no-repeat;
@@ -468,6 +512,9 @@ body{
           }
           .swiper-slide {
             text-align: center;
+            @mixin food_shadow($color){
+                box-shadow: 0px 0px 25px $color;
+            }
             .food{
                 min-height: 100px;
                 margin: 1em;
@@ -476,7 +523,8 @@ body{
                 text-align: center;
                 color: white;
                 margin-top: 6em;
-                box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+                @include food_shadow(rgba(0,0,0,0.5));
+                
                 .arc{
                     // border: 80px solid black;
                     // border-top: 80px solid $gold;
@@ -553,6 +601,10 @@ body{
                     padding: 5px;
                     font-size: 13px;
                     cursor: pointer;
+                    border: 1px solid $gold;
+                    &:hover{
+                        background: none;
+                    }
                 }
                 .options{
                     display: flex;
@@ -562,8 +614,8 @@ body{
                     margin-top: 2em;
                     
                     span{
-                        width: 15px;
-                        height: 15px;
+                        width: 13px;
+                        height: 13px;
                         border-radius: 50%;
                         display: inline-block;
                         cursor: pointer;
@@ -573,6 +625,7 @@ body{
                     }
                     .option-gold{
                         background: $gold;
+                        
                     }
                     .option-green{
                         background: $green;
@@ -584,9 +637,40 @@ body{
             }
             .food-gold{
                 background: $gold;
+                @include food_shadow(rgba(204,153,51,0.5));
+                header{
+                    color: $black;
+                }
+                .arc{
+                    transform: rotate(0deg);
+                    margin-top: -90px;
+                }
+                .image{
+                    margin-top: -150px;
+                }
+                button{
+                    border: 1px solid black;
+                    background: none;
+                    color: black;
+                    &:hover{
+                        background: black;
+                        color: white;
+                    }
+                }
+                .options .option-gold{
+                    background-color: black;
+                }
             }
             .food-green{
+                @extend .food-gold;
+                @include food_shadow(rgba(76,207,54,0.5));
                 background: $green;
+                .options .option-gold{
+                    background-color: $gold;
+                }
+                .options .option-green{
+                    background-color: black;
+                }
             }
           }
     }
@@ -596,7 +680,7 @@ body{
     background: $black;
     margin-left: -3%;
     .form-area{
-        width: 70%;
+        width: 65%;
         margin: auto;
     }
     button{
