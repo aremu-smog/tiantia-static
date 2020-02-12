@@ -645,7 +645,7 @@ body {
 }
 
 .body .tianfoods .swiper-container {
-  width: 80%;
+  width: 75%;
   height: auto;
   cursor: -webkit-grab;
   cursor: grab;
@@ -1100,7 +1100,7 @@ body {
     font-size: 0.7em;
   }
   .body .tianfoods .swiper-container {
-    width: 90%;
+    width: 80%;
   }
   .section-header {
     font-size: 2.75em;
@@ -1148,9 +1148,19 @@ body {
     display: none !important;
   }
   .join-the-tribe {
-    height: 500px;
+    height: 430px;
     background-size: 150%;
     background-position: bottom left;
+  }
+  .join-the-tribe p {
+    font-size: 0.8em;
+  }
+  .join-the-tribe h3 {
+    font-size: 1em;
+  }
+  .join-the-tribe button {
+    font-size: 0.8em;
+    padding: 0.8em 1.4em;
   }
   .main-footer .row {
     -webkit-box-orient: vertical;
