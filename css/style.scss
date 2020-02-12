@@ -35,7 +35,36 @@ $gold: #CC9933;
 $green: #4CCF36;
 $black: #000000;
 $white: #ffffff;
+$light-grey: #e5e5e5;
 $deep-grey: #757575;
+
+/*Backgrounds */
+.bg-gold{
+    background: $gold;
+}
+.bg-black{
+    background: $black;
+}
+
+/*Texts */
+.text-gold{
+    color: $gold;
+}
+.text-black{
+    color: $black;
+}
+.text-white{
+    color: $white;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
 
 /* Mixins */
 @mixin button-bare {
@@ -66,21 +95,25 @@ body{
     animation: float-button 1s ease-in-out infinite;
     width: 30px;
 }
-.big-circle{
-    width: 60%;
-    position: absolute;
-    z-index: -1;
-    right:-30%;
-    margin-top: -40%;
-    &:last-child{
-        left: -30%;
-        margin-top: -20%;
-    }
-}
+// .big-circle{
+//     width: 60%;
+//     position: absolute;
+//     z-index: -1;
+//     right:-30%;
+//     margin-top: -40%;
+//     &:last-child{
+//         left: -30%;
+//         margin-top: -20%;
+//     }
+// }
 .chain-link{
     width: 100%;
-    margin-top: 4em;
+    margin-top: 0.6em;
     height: 185px;
+    background-image: url(../img/elements/pattern.svg);
+    background-repeat: repeat-x;
+    background-position: center top;
+    padding-top: 2em;
     
     div{
         width: 1px;
@@ -152,12 +185,10 @@ body{
 .section-header{
     font-family: "EnglishTowne";
     font-size: 3.75em;
-    color: $black;
+    // color: $black;
     text-align: center;
     margin-top: 0.3em;
-    span{
-        color: $gold;
-    }
+    
 }
 .section-description{
     font-family: "Montserrat-Semibold";
@@ -177,14 +208,12 @@ body{
     background-position: bottom center;
     text-align: center;
     a{
-       color: $gold;
        text-decoration: none; 
     }
     article{
         /* Landing page heading */
         .heading{
             font-family: "EnglishTowne";
-            color: $gold;
             font-size: 5em;
             text-align: center;
             line-height: 0;
@@ -197,7 +226,6 @@ body{
             margin-top: -2em;
             p{
                 font-family: "Poppins-Regular";
-                color: $white;
                 font-size: 0.9em;
             }
         }
@@ -205,7 +233,6 @@ body{
         footer{
             font-size: 1.2em;
             font-family: "Playfair-Bold";
-            color: $gold;
             margin-top: -0.5em;
         }
     }
@@ -308,7 +335,13 @@ body{
 }
 .col-6{ width: 45%;}
 .col-8{ width: 65%; }
-.col-4{width: 25%;}
+.col-5{ width: 36%;}
+.col-4{width: 28%;}
+.col-3{width: 20%;}
+.menu-row{
+    display: flex;
+    justify-content: space-between;
+}
 .form-group{
     margin-top: 2em;
     label{
@@ -328,10 +361,10 @@ body{
         padding: 9px 20px;
         background: $white;
         margin-top: 10px;
-        width: 100%;
+        width: calc(100% - 20px);
     }
     select{
-        width: calc(100% + 40px);
+        width: calc(100% + 20px);
     }
     input[type="radio"]{
         width: auto;
@@ -404,11 +437,12 @@ body{
     scroll-behavior: smooth;
 }
 .body{
-    padding: 5em 2em 4em 2em;
+    background: #f5f5f5;
+    padding: 5em 0em 4em 0em;
     .features{
         display: flex;
         justify-content: center;
-        background-image: url('../img/icons/circle-1.svg');
+        // background-image: url('../img/icons/circle-1.svg');
         background-repeat: no-repeat;
         background-position: 19% 5%;
         .feature{
@@ -433,9 +467,11 @@ body{
     
     .chain-link{
         
-        background: url('../img/icons/circle-1.svg');
-        background-repeat: no-repeat;
-        background-position-x: 40%;
+        background: url('../img/elements/pattern.svg');
+        background-repeat: repeat-x;
+        background-position: center center !important;
+        margin-top: 2em;
+        padding-top: 0;
     }
     .brief-about{
         transform: rotate(-90deg);
@@ -697,6 +733,42 @@ body{
     }
 }
 
+.join-the-tribe{
+    padding: 2em;
+    height: 700px;
+    background-image: url('../img/elements/the-tribe-illustration.svg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    p{
+        max-width: 700px;
+        margin:auto;
+        font-family: 'Montserrat-Regular';
+        margin-top: 1em;
+    }
+    h3{
+        font-family: 'Montserrat-bold';
+        font-size: 1.6em;
+    }
+    button{
+        @include button-bare();
+        background: white;
+        border-radius: 50px;
+        font-family: 'Montserrat-Bold';
+        padding: 1em 2em;
+        width: auto;
+        transition: opacity 1s;
+        margin-bottom: 100px;
+        font-size: 1em;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    img{
+        width: 100%;
+    }
+}
+
 .testimonial{
     width: 100%;
     margin: auto;
@@ -737,13 +809,24 @@ body{
 .main-footer{
     background: $black;
     color: $white;
-    padding: 2em 0;
+    padding: 4em 0;
     font-size: 0.8em;
+    line-height: 1.5em;
+    font-family: 'Montserrat-Thin';
+    .text-gold{
+        font-family: 'Montserrat-Bold';
+    }
     .row{
         width: 80%;
         margin: auto;
-        .col-3{
-            width: 33%;
+        align-items: center;
+    }
+    img{
+        height: 20px;
+        margin-left: 10px;
+        transition: opacity 0.7s;
+        &:hover{
+            opacity: 0.7;
         }
     }
 }
@@ -777,6 +860,7 @@ body{
 // }
 // Mobile Resposivness
 @media only screen and (max-width: 900px){
+    
     .form-group{
         margin-top: 1em;
         input, select, .total-amount, textarea, .payment-method{
@@ -905,16 +989,36 @@ body{
     .prev-button, .next-button{ width:15px; height: 20px; }
     
     }
-    .payment-row, .menu-row{
+    .payment-row{
         flex-direction: row !important;
         .col-8{   width: 165% !important;
         padding-right: 10px;  }
         
     }
+    .menu-row{
+        flex-direction: column !important;
+        .col-6,.col-5,.col-3,.col-4{
+            width: 100%;
+        }
+    }
   
 .float{
     display: none !important;
 }
+.join-the-tribe{
+    height: 500px;
+    background-size: 150%;
+    background-position: bottom left;
+}
    
-    
+ .main-footer{
+     .row{
+         flex-direction: column;
+         text-align:center;
+     }
+     img{
+         height: 15px;
+         margin-top: 25px;
+     }
+ }   
 }
