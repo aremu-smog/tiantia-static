@@ -194,7 +194,6 @@ body {
   height: 100vh;
   width: 100%;
   background: #000000;
-  background-size: 40%;
   background-repeat: no-repeat;
   background-position: bottom center;
   text-align: center;
@@ -871,16 +870,32 @@ body {
   width: 33%;
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) {
-  .landing {
-    background-size: 50%;
-  }
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
   .landing article content {
-    width: 50%;
+    width: 45%;
+  }
+  .landing .hero-banana, .landing .hero-corn {
+    bottom: -10%;
+    display: none;
+  }
+  #ayo {
+    display: none;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 1201px) and (max-width: 1359px) {
+  .landing .hero-banana {
+    bottom: -5%;
+  }
+  #pot {
+    left: -10%;
+  }
+  #ayo {
+    right: -20%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
   .form-group {
     margin-top: 1em;
   }
@@ -910,8 +925,11 @@ body {
     display: none;
   }
   .landing {
-    background-size: 80%;
     height: calc(100% - 90);
+  }
+  .landing .hero-image {
+    width: 70%;
+    right: 15%;
   }
   .landing .main-navigation {
     display: none;

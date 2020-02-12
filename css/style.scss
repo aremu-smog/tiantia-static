@@ -171,7 +171,7 @@ body{
     width: 100%;
     background: $black;
     // background-image: url('../img/landing-image.png');
-    background-size: 40%;
+    // background-size: 40%;
     background-repeat: no-repeat;
     background-position: bottom center;
     text-align: center;
@@ -744,18 +744,35 @@ body{
     }
 }
 
-
-@media only screen and (min-width: 1024px) and (max-width: 1359px){
-    .landing{ 
-        background-size: 50%;  
-        article{ content{width: 50%;}}  
+@media only screen and (min-width:901px) and (max-width:1200px){
+    .landing{
+        article{
+            content{
+                width: 45%;
+            }
+        }
+        .hero-banana, .hero-corn{
+            bottom: -10%;
+            display: none;
+        }
     }
+    #ayo{display: none;}
+}
+@media only screen and (min-width: 1201px) and (max-width: 1359px){
+    .landing{ 
+        .hero-banana{
+            bottom: -5%;
+        }
+    }
+    // #leaf{right: -14%;}
+    #pot{left: -10%}
+    #ayo{right: -20%; }
 }
 // @media only screen and (min-width: 1024) and (max-width: 1359px){
     
 // }
 // Mobile Resposivness
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 900px){
     .form-group{
         margin-top: 1em;
         input, select, .total-amount, textarea, .payment-method{
@@ -786,8 +803,12 @@ body{
         display: none;
     }
     .landing{
-        background-size: 80%;
+        // background-size: 80%;
         height: calc(100% - 90);
+        .hero-image{
+            width: 70%;
+            right: 15%;
+        }
         .main-navigation{
             display: none;
         }
