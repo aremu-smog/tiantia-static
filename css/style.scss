@@ -513,7 +513,7 @@ body{
           .swiper-slide {
             text-align: center;
             @mixin food_shadow($color){
-                box-shadow: 0px 0px 25px $color;
+                box-shadow: 0px 0px 15px $color;
             }
             .food{
                 min-height: 100px;
@@ -524,7 +524,7 @@ body{
                 color: white;
                 margin-top: 6em;
                 @include food_shadow(rgba(0,0,0,0.5));
-                
+                transition: all 1s;
                 .arc{
                     // border: 80px solid black;
                     // border-top: 80px solid $gold;
@@ -540,7 +540,7 @@ body{
                     z-index: -1;
                     margin-left: auto;
                     margin-right: auto;
-                    // transition: transform 1s;
+                    transition: transform 1s;
                     svg{
                         width: 150px;
                         margin: auto;
@@ -575,6 +575,9 @@ body{
                     width: 80%;
                     margin: auto;
                     margin-top: -15px;
+                    .type{
+                        text-transform: capitalize;
+                    }
                 }
                 .price{
                     font-family: Montserrat-Regular;
