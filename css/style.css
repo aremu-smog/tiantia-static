@@ -58,6 +58,7 @@ body {
   margin: auto;
   -webkit-animation: float-button 1s ease-in-out infinite;
           animation: float-button 1s ease-in-out infinite;
+  width: 30px;
 }
 
 .big-circle {
