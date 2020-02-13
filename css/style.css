@@ -1041,9 +1041,6 @@ body {
     width: 150px;
     display: none;
   }
-  .landing {
-    height: calc(100vh - 90px) !important;
-  }
   .landing .hero-image {
     width: 70%;
     right: 15%;
