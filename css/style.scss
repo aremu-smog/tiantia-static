@@ -266,10 +266,16 @@ body{
 }
 .img-float-left{
     position: absolute;
-    left: 0;
-    width: 250px;
+    left: -10%;
+    width: 350px;
+    // top: 100px;
     // animation: float-element 3.5s ease-in-out infinite;
     // animation-delay: 1.5s;
+}
+[float-element="ayo"]{
+    transform: rotate(65deg);
+    left: -12%;
+    // margin-top: 100px;
 }
 [offset-element="banana-leaf"]{
     margin-top: -30px;
@@ -894,7 +900,7 @@ body{
     }
     .landing{
         // background-size: 80%;
-        height: calc(100% - 90);
+        height: calc(100vh - 90px) !important;
         .hero-image{
             width: 70%;
             right: 15%;
@@ -968,7 +974,7 @@ body{
     
         .tianfoods{
             .swiper-container{
-                width: 80%;
+                width: 72%;
             }
         }
     }
